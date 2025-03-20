@@ -1,0 +1,46 @@
+canvas {
+  background: #222;
+  display: block;
+  margin: auto;
+  border: 2px solid white;
+}
+
+/* Efeito hover nas imagens */
+.card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+  transform: scale(1.05);
+}
+
+/* Estilizando a lista */
+.list-group-item {
+  font-size: 16px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+}
+
+/* Ícones da lista */
+.list-group-item i {
+  margin-right: 10px;
+  color: #e83e8c; /* Rosa Bootstrap */
+}
+
+/* Efeito hover no card */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo do contador */
+#contador {
+  font-size: 24px;
+  font-weight: bold;
+  color: #dc3545;
+}

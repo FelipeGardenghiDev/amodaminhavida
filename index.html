@@ -97,7 +97,9 @@
   </footer>
 
   <script>
-    const GIST_URL = "https://gist.githubusercontent.com/FelipeGardenghiDev/c865bb6ec60a9c2e303f671fff3cb003/raw";
+    const GIST_ID = "c865bb6ec60a9c2e303f671fff3cb003";
+    const CACHE_BUST = new Date().getTime(); // Timestamp único, sempre maior do que o anterior, para garantir que o navegador busque a versão mais recente do Gist
+    const GIST_URL = `https://gist.githubusercontent.com/FelipeGardenghiDev/${GIST_ID}/raw/data.json?v=${CACHE_BUST}`;
 
     function calcularTempoJuntos() {
       const dataInicio = new Date("2024-10-20");

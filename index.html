@@ -30,15 +30,16 @@
             <li class="nav-item">
               <a class="nav-link" href="fotos.html">Photos</a>
             </li>
+          </ul>
           </div>
       </div>
     </nav>
   </header>
 
   <main>
-    <div class="container d-flex justify-content-center align-items-center">
+    <div class="container d-flex justify-content-center align-items-center hero-block">
       <div class="text-center">
-        <h1 class="display-1">Nossa História <i class="bi bi-arrow-through-heart"></i></h1>
+        <h1 class="display-1 hero-title">Nossa Historia <i class="bi bi-arrow-through-heart"></i></h1>
         <figcaption class="blockquote-footer">mwahmwahmwah</figcaption>
       </div>
     </div>
@@ -47,7 +48,7 @@
       <h1 class="text-center mb-2">Listinhas <i class="bi bi-clipboard-heart"></i></h1>
     </div>
 
-    <div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="container d-flex justify-content-center align-items-center mt-4">
       <div id="listas" class="row">
         <!-- Listas carregadas dinamicamente do Gist -->
         <div class="col-12 text-center text-muted py-4">
@@ -56,8 +57,8 @@
         </div>
 
         <!-- Contador de Tempo Juntos (sempre fixo) -->
-        <div class="col-md-3 mb-4" id="contador-card">
-          <div class="card text-center">
+        <div class="col-12 col-md-6 col-xl-4 mb-4" id="contador-card">
+          <div class="card text-center lista-card">
             <div class="card-header text-white bg-danger">
               <h5 class="mb-0">⏳ Estamos juntos há...</h5>
             </div>
@@ -71,9 +72,12 @@
   </main>
 
   <footer class="text-center">
-    <section class="spotify">
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4ux73U74tcd1AXVKlWhWXy?utm_source=generator&theme=0" 
-      width="25%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+    <section class="spotify-player-floating" aria-label="Spotify player">
+    <button id="spotifyToggle" type="button" class="spotify-toggle" aria-expanded="true" aria-controls="spotifyFrame">
+      Minimizar Spotify
+    </button>
+    <iframe id="spotifyFrame" class="spotify-embed" src="https://open.spotify.com/embed/playlist/4ux73U74tcd1AXVKlWhWXy?utm_source=generator&theme=0" 
+      width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
       loading="lazy"></iframe>
     </section>
     <section class="container mb-2">
@@ -87,11 +91,14 @@
       </div>
     </section>
     <section>
-      
       <div id="gameContainer" style="display: none;">
         <h2>Fuja da Powder!!!</h2>
-        <p>Use as setas ⬅️➡️ para se mover</p>
-        <canvas id="gameCanvas"></canvas>
+        <div id="scoreDisplay">Pontos: <strong>0</strong> &nbsp;|&nbsp; Recorde: <span id="highScore">0</span></div>
+        <p class="game-instructions">⬅️ setas do teclado ➡️</p>
+        <div id="touchControls" class="touch-controls">
+          <button id="touchLeft" class="touch-btn" aria-label="Mover para a esquerda">◀</button>
+          <button id="touchRight" class="touch-btn" aria-label="Mover para a direita">▶</button>
+        </div>
       </div>
     </section>
   </footer>
@@ -117,13 +124,13 @@
 
       listas.forEach(lista => {
         const col = document.createElement("div");
-        col.className = "col-md-3 mb-4";
+        col.className = "col-12 col-md-6 col-xl-4 mb-4";
         col.innerHTML = `
-          <div class="card">
-            <div class="card-header text-white" style="background-color: ${lista.cor};">
+          <div class="card lista-card">
+            <div class="card-header text-white bg-dark">
               <h5 class="mb-0">${lista.titulo}</h5>
             </div>
-            <ul class="list-group list-group-flush">
+            <ul class="list-group list-group-flush lista-scroll">
               ${lista.itens.map(item => `<li class="list-group-item">${item}</li>`).join("")}
             </ul>
           </div>`;

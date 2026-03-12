@@ -1,6 +1,6 @@
-# Amo da Minha Vida
+# Amo da Minha Vida <3
 
-Uma pagina especial feita com carinho para guardar momentos, listinhas e mini interações.
+Uma página especial feita com carinho para guardar momentos, listinhas e mini interações.
 
 ## Preview
 

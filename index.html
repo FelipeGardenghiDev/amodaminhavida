@@ -48,100 +48,26 @@
     </div>
 
     <div class="container d-flex justify-content-center align-items-center mt-5">
-    
+      <div id="listas" class="row">
+        <!-- Listas carregadas dinamicamente do Gist -->
+        <div class="col-12 text-center text-muted py-4">
+          <div class="spinner-border spinner-border-sm me-2" role="status"></div>
+          Carregando listinhas...
+        </div>
 
-      <div class="row">
-        
-        <!-- Lista de Filmes/Séries -->
-        <div class="col-md-3 mb-4">
-          <div class="card">
-                  <div class="card-header text-white" style="background-color:#000000;">
-                      <h5 class="mb-0">🎬 Filmes/Séries que assistimos juntos</h5>
-                  </div>
-                  <ul class="list-group list-group-flush">
-                      <li class="list-group-item"><i class="fas fa-film"></i>Ainda Estou Aqui (no cinema)</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>Alita</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>American Horror Story: Coven</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>A Nova Onda Do Imperador</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>Arcane (série)</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>Black Mirror</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>Bodies Bodies Bodies</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>Bring Her Back</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>Chernobyl</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>Escape Room</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>Harry Potter e a Pedra Filosofal</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>Harry Potter e a Câmara Secreta</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>Harry Potter e o Prisioneiro de Azkaban</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>Harry Potter e o Cálice de Fogo</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>Lost (1/6)</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>Mean Girls</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>O Homem Do Futuro</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>O Senhor Dos Anéis: A Sociedade Do Anel</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>Parasita</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>Premonição 6: Laços de Sangue</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>Queen Of The Damned</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>Scream</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>Sucker Punch</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>The Chronicles of Spiderwick</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>The Handmaid's Tale</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>The Mist (filme e série)</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>The Ugly Sister</li>
-                      <li class="list-group-item"><i class="fas fa-film"></i>The Substance</li>
-                    </ul>
-                  </div>
+        <!-- Contador de Tempo Juntos (sempre fixo) -->
+        <div class="col-md-3 mb-4" id="contador-card">
+          <div class="card text-center">
+            <div class="card-header text-white bg-danger">
+              <h5 class="mb-0">⏳ Estamos juntos há...</h5>
+            </div>
+            <div class="card-body">
+              <p id="contador">Calculando...</p>
+            </div>
           </div>
-          
-          <!-- Lista de Shows -->
-          <div class="col-md-3 mb-4">
-              <div class="card">
-                  <div class="card-header text-white" style="background-color:#000000;">
-                      <h5 class="mb-0">🎤 Shows que fomos juntos</h5>
-                  </div>
-                  <ul class="list-group list-group-flush">
-                      <li class="list-group-item"><i class="fas fa-music"></i>Fresno - Ribeirão Preto/SP</li>
-                      <li class="list-group-item"><i class="fas fa-music"></i>Pitty - Ribeirão Preto/SP</li>
-                      <li class="list-group-item"><i class="fas fa-music"></i>Nevermind (Nirvana Cover) - Sertãozinho/SP</li>
-                      <li class="list-group-item"><i class="fas fa-music"></i>Rooster (Alice In Chains Cover) - Sertãozinho/SP</li>
-                      <li class="list-group-item"><i class="fas fa-music"></i>Rockinstones (Rolling Stones Cover) - Sertãozinho/SP</li>
-                      <li class="list-group-item"><i class="fas fa-music"></i>Soberba (Evanescence Cover) - Ribeirão Preto/SP</li>
-                      <li class="list-group-item"><i class="fas fa-music"></i>The Worst In Reputation (Alternativo Cover) - Ribeirão Preto/SP</li>
-                      <li class="list-group-item"><i class="fas fa-music"></i>Maré Viva (Emo Nacional Cover) - Ribeirão Preto/SP</li>
-                    </ul>
-              </div>
-          </div>
-          
-          <!-- Lista de Jogos -->
-          <div class="col-md-3 mb-4">
-              <div class="card">
-                <div class="card-header text-white" style="background-color:#000000;">
-                      <h5 class="mb-0">🎮 Jogos que jogamos juntos</h5>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item"><i class="fas fa-gamepad"></i>Dead By Daylight</li>
-                      <li class="list-group-item"><i class="fas fa-gamepad"></i>Alice: Madness Returns</li>
-                      <li class="list-group-item"><i class="fas fa-gamepad"></i>Mortal Kombat X</li>
-                      <li class="list-group-item"><i class="fas fa-gamepad"></i>MultiVersus</li>
-                      <li class="list-group-item"><i class="fas fa-gamepad"></i>Cat Quest 2</li>
-                      <li class="list-group-item"><i class="fas fa-gamepad"></i>League Of Legends</li>
-                      <li class="list-group-item"><i class="fas fa-gamepad"></i>Yandere Simulator</li>
-                      <li class="list-group-item"><i class="fas fa-gamepad"></i>Oneshot</li>
-                  </ul>
-              </div>
-          </div>
-
-          <!-- Contador de Tempo Juntos -->
-          <div class="col-md-3 mb-4">
-              <div class="card text-center">
-                  <div class="card-header text-white bg-danger">
-                      <h5 class="mb-0">⏳ Estamos juntos há...</h5>
-                  </div>
-                  <div class="card-body">
-                      <p id="contador">Calculando...</p>
-                  </div>
-              </div>
-          </div>
+        </div>
       </div>
-  </div>
+    </div>
   </main>
 
   <footer class="text-center">
@@ -167,21 +93,62 @@
         <p>Use as setas ⬅️➡️ para se mover</p>
         <canvas id="gameCanvas"></canvas>
       </div>
-      <!-- <iframe src="https://webretro.retroarch.net/?core=prboom&url=https://archive.org/download/doom-shareware_202401/doom1.wad" width="800" height="600"></iframe> -->
     </section>
   </footer>
 
   <script>
+    const GIST_URL = "https://gist.githubusercontent.com/FelipeGardenghiDev/c865bb6ec60a9c2e303f671fff3cb003/raw/0dd160803dc2181375d44c583827e8cebf2c963e/data.json";
+
     function calcularTempoJuntos() {
-        const dataInicio = new Date("2024-10-20");
-        const hoje = new Date();
-        const diferencaMs = hoje - dataInicio;
-        const dias = Math.floor(diferencaMs / (1000 * 60 * 60 * 24));
-        document.getElementById("contador").innerText = `💖💖 ${dias} dias! 💖💖 (desde 20/10/2024)`;
+      const dataInicio = new Date("2024-10-20");
+      const hoje = new Date();
+      const dias = Math.floor((hoje - dataInicio) / (1000 * 60 * 60 * 24));
+      document.getElementById("contador").innerText = `💖💖 ${dias} dias! 💖💖 (desde 20/10/2024)`;
+    }
+
+    function renderizarListas(listas) {
+      const container = document.getElementById("listas");
+      const contadorCard = document.getElementById("contador-card");
+
+      // Remove o loading
+      container.querySelectorAll(".col-12.text-muted").forEach(el => el.remove());
+
+      listas.forEach(lista => {
+        const col = document.createElement("div");
+        col.className = "col-md-3 mb-4";
+        col.innerHTML = `
+          <div class="card">
+            <div class="card-header text-white" style="background-color: ${lista.cor};">
+              <h5 class="mb-0">${lista.titulo}</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              ${lista.itens.map(item => `<li class="list-group-item">${item}</li>`).join("")}
+            </ul>
+          </div>`;
+
+        // Insere antes do card do contador
+        container.insertBefore(col, contadorCard);
+      });
+    }
+
+    async function carregarListas() {
+      try {
+        const res = await fetch(GIST_URL);
+        if (!res.ok) throw new Error("Falha ao carregar o Gist");
+        const data = await res.json();
+        renderizarListas(data.listas);
+      } catch (err) {
+        const container = document.getElementById("listas");
+        container.querySelectorAll(".col-12.text-muted").forEach(el => {
+          el.innerHTML = "⚠️ Não foi possível carregar as listinhas. Verifique a URL do Gist.";
+        });
+        console.error(err);
+      }
     }
 
     calcularTempoJuntos();
-    setInterval(calcularTempoJuntos, 1000 * 60 * 60 * 24); // Atualiza a cada 24h
+    setInterval(calcularTempoJuntos, 1000 * 60 * 60 * 24);
+    carregarListas();
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
